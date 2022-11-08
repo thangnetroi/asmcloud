@@ -102,9 +102,9 @@ async function display_products(shop_id,session){
         if(session.shop_id!=0){
             table_string += 
             `<td>
-            <button type="submit" name='crud' 
+            <button type="button" name='crud' 
                 class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded" value='update'>Update</button>
-            <button type="submit" name='crud' 
+            <button type="button" name='crud' 
                 class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
                 value='delete'>Delete</button>
         </td>
@@ -138,7 +138,7 @@ async function display_products(shop_id,session){
         }
         table_string += 
         `<td> 
-        <button type="submit" 
+        <button type="button" 
         class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
             name='crud' 
             value='insert'>Insert</button>
