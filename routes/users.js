@@ -21,10 +21,13 @@ router.get('/', async function(req, res, next) {
 });
 
 router.post('/crud', async function(req, res, next) {
+  session = req.session;
+  console.log(session);
   console.log(req.body);
   let results = await crud(req.body,session);
   //refresh the page
-  let table = await display_product(session.shop_id,session);
+  console.log(session.shop_id);
+  let table = await display_product(req.session.shop_id);
   res.render('users', { title: 'ATN Shop', 
                         name: session.user_id, 
                         table_string: table})
